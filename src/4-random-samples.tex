@@ -1,0 +1,129 @@
+
+
+\Lst {Definition}
+A simple random sample is a set of identically distributed random variables, but not necessarily independent.
+A random sample is independent and identically distributed (IID).
+
+\Lst {Definition}
+Given are random samples \M {\I {\DT {X}} {1} \c \PDL \c \I {\DT {X}} {N}}.
+We define these statistics: sample mean
+
+\MEN {
+  \NC \XXLT
+  \RD \F {1} {N} \BR {\I {\DT {X}} {1} \a \PDC \a \I {\DT {X}} {N}} \NR
+}
+and sample variance:
+\MEN {
+  \NC \S {\DT {S}} {2}
+  \RD \F {1} {N \s 1}
+    \SmT {n \e 1} {N}
+      {\S {\BR {\DL {X} \s \XXLT}} {2}} \NR
+}
+
+\Lst {Proposition}
+Denote
+\MAN {
+  \NC \UL {\Bf {0}}
+  \NC \e \BR {0 \c \PDL \c 0} \NR
+  \NC \UL {\Bf {1}}
+  \NC \e \BR {1 \c \PDL \c 1} \NR
+}
+Then (a)
+\MEN {
+  \NC \XXLT
+  \e \F {1} {N} \S {\UL {\Bf {1}}} {\LT} \UL {\DT {X}} \NR
+}
+And (b)
+\MEN {
+  \NC \S {\DT {S}} {2}
+  \e \F {1} {N \s 1} \S {\XXTV} {\LT}
+  \BR {\ULL {I} \s \F {1} {N} \UL {\Bf {1}} \S {\UL {\Bf {1}}} {\LT}}
+  \XXTV \NR
+}
+Here, all matrices are \M {N} by \M {N}.
+
+\Lst {Proposition}
+Let \M {\I {\DT {X}} {1} \c \PDL \c \I {\DT {X}} {N}\RS \Hd {N} \BSS {\Gm, \S {\Gs} {2}}}.
+Then
+\MEN {
+  \NC \XXLT
+  \XInd \S {\DT {S}} {2} \NR
+}
+And
+\MEN {
+  \NC \F {N \s 1} {\S {\Gs} {2}} \S {\DT {S}} {2}
+  \RS \S {\Gx} {2} \BSS {n-1} \NR
+}
+
+
+\Lst {Proof} (a)
+Let \M {\ULL {H} \RD \ULL {I} \s \F {1} {N} \UL {\Bf {1}} \S {\UL {\Bf {1}}} {\LT}}.
+Observe that
+\MEN {
+  \NC \S {H} {2}
+  \e H \NR
+}
+which means that its eigenvalues must be \M {0} or \M {1}.
+We have,
+\MEN {
+  \NC \S {\DT {S}} {2}
+  \e \F {1} {N \s 1}
+  \S {\BR {\ULL {H} \XXTV}} {\LT}
+  \ULL {H} \XXTV \NR
+}
+and it suffices to show that
+\MEN {
+  \NC \ULL {H} \XXTV
+  \XInd \S {\UL {\Bf {1}}} {\LT} \XXTV \NR
+}
+To see this, \M {\MtS {\NC \S {\UL {\Bf {1}}} {\LT} \NR \NC \ULL {H} \NR}} follows Multivariate Normal, and since \M {\UL {\Bf {1}} \ULL {H} \e \UL {\Bf {0}}}, moment's reflection shows the independence holds.
+
+(b) Furthermore, \M {\ULL {H}} has exactly \M {1} eigenvector having eigenvalue \M {0}, which is \M {\UL {\Bf {1}}}, so there are \M {N \s 1} eigenvectors with eigenvalue \M {1}.
+We see that \M {\S {\DT {S}} {2}} must follow chi-square distribution, by definition, and the degree of freedom is \M {N \s 1}.
+
+\Lst {Definition}
+RV \M {\DT {X}} has Student-\M {t} distribution \M {\Hd {T} \BSXS {p}}, if it has PDF
+\MEN {
+  \NC \I {f} {X} \BS {x}
+  \e \F {\GG \BS {\BR {n \s 1} \d 2}} {\GG \BS {p \d 2}}
+  \S {\BRXS {p \Gp}} {\s 1 \d 2}
+  \S {\BR {1 \a \F {\S {t} {2}} {p}}} {\s \BRXS {p \a 1} \d 2} \NR
+}
+
+\Lst {Proposition}
+Given are IID RVs \M {\I {X} {1} \c \PDL \c \I {X} {n} \RS \Hd {N} \BS {\Gm \c \S {\Gs} {2}}}.
+\M {\DL {X}} and \M {S} are defined above.
+Then,
+\MEN {
+  \NC \F {\DL {X} \s \Gm} {S \d \Rd {n}}
+  \RS \Hd {T} \BSXS {n} \NR
+}
+
+\Lst {Proposition}
+Let \M {X \RS \Hd {T} \BSXS {p}} and \M {Y \RS \Hd {N} \BS {0 \c \S {1} {2}}}.
+Then
+\MEN {
+\NC X
+\SC {\to} {\Rm {dist}} Y \NR
+}
+
+\Lst {Definition}
+RV \M {\DT {X}} is said to have Snedecor-Fisher-\M {F} distribution \M {\Hd {F} \BSXS {p,q}}, if it has PDF
+\MEN {
+\NC \I {f} {X} \BS {x}
+\F {\GG \BS {\BR {p \a q} \d 2}} {\GG \BS {\BR {p} \d 2} \GG \BS {\BR {q} \d 2}}
+\S {\BR {\F {p} {q}}} {p \d 2}
+\F {\S {x} {p \d 2 \s 1}} {\S {\BR {1 \a \BR {p \d q} x}} {\BR {p \a q} \d 2}},
+\SpM 0 \l x \l \infty \NR
+}
+
+\Lst {Proposition}
+Given are IID \M {\I {X} {1} \c \PDL \I {X} {p} \RS \Hd {N} \BS {\I {\Gm} {X} \c \S {\I {\Gs} {X}} {2}}},
+and \M {\I {Y} {1} \c \PDL \I {Y} {q}  \RS \Hd {N} \BS {\I {\Gm} {X} \c \S {\I {\Gm} {X}} {2}}}.
+\M {\DL {X} \c \DL {X} \c S} are defined above.
+Then
+\MEN {
+   \NC \F {\IS {S} {X} {2} \d \IS {\Gs} {X} {2}} {\IS {S} {Y} {2} \d \IS {\Gs} {Y} {2}}
+   \RS \I {\Hd {F}} {p \s 1 \c q \s 1} \NR
+}
+

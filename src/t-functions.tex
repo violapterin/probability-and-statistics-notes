@@ -1,0 +1,168 @@
+
+\define [1] {\Rm} {{\tf \rm #1}}
+\define [1] {\Bf} {{\bf \rm #1}}
+\define [1] {\It} {{\it \rm #1}}
+\define [1] {\BfIt} {{\bi \rm #1}}
+
+\define [1] {\Ss} {{\tf \ss #1}}
+\define [1] {\Tt} {{\tf \tt #1}}
+
+\define [1] {\Tt} {{\tf \tt #1}}
+
+% % % % % % % % % % % % % % % %
+
+\define [1] {\MtS} {\startMatrixSquare #1 \stopMatrixSquare}
+\define [1] {\MtV} {\startMatrixVertical #1 \stopMatrixVertical}
+\define [1] {\Rd} {\sqrt {#1}} % radical
+\define [2] {\F} {\dfrac {#1} {#2}}
+
+% % % % % % % % % % % % % % % %
+
+\define [1] {\Fr} {\mathfrak {#1}} % fraktur
+\define [1] {\Bl} {\mathbb {#1}} % blackboard
+\define [1] {\Hd} {\mathcal {#1}} % handwriting
+\define [1] {\Cs} {\mathscr {#1}} % cursive
+
+% % % % % % % % % % % % % % % %
+
+\define [1] {\BR} {\left( #1 \right)}
+\define [1] {\BRXS} {( #1 )}
+\define [1] {\BRS} {\big( #1 \big)}
+\define [1] {\BRM} {\Big( #1 \Big)}
+\define [1] {\BRL} {\bigg( #1 \bigg)}
+\define [1] {\BRXL} {\Bigg( #1 \Bigg)}
+\define [1] {\BS} {\left[ #1 \right]}
+\define [1] {\BSXS} {[ #1 ]}
+\define [1] {\BSS} {\big[ #1 \big]}
+\define [1] {\BSM} {\Big[ #1 \Big]}
+\define [1] {\BSL} {\bigg[ #1 \bigg]}
+\define [1] {\BSXL} {\Bigg[ #1 \Bigg]}
+\define [1] {\BC} {\left{ #1 \right}}
+\define [1] {\BCXS} {{ #1 }}
+\define [1] {\BCS} {\big{ #1 \big}}
+\define [1] {\BCM} {\Big{ #1 \Big}}
+\define [1] {\BCL} {\bigg{ #1 \bigg}}
+\define [1] {\BCXL} {\Bigg{ #1 \Bigg}}
+
+% % % % % % % % % % % % % % % %
+
+
+% integration
+\define [2] {\ItD} {\int #1 \Dif #2}
+\define [3] {\ItT} {\int _{#1} #2 \Dif #3}
+\define [4] {\ItQ} {\int _{#1} ^{#2} #3 \Dif #4}
+
+% summation
+\define [1] {\SmU} {\sum #1}
+\define [2] {\SmD} {\sum _{#1} #2}
+\define [3] {\SmT} {\sum _{#1} ^{#2} #3}
+
+% product
+\define [1] {\PdU} {\prod #1}
+\define [2] {\PdD} {\prod _{#1} #2}
+\define [3] {\PdT} {\prod _{#1} ^{#2} #3}
+
+% superscript, subscript
+\define [2] {\I} {{#1} _{#2}} % inferior
+\define [2] {\S} {{#1} ^{#2}} % superior
+\define [3] {\IS} {{#1} _{#2} ^{#3}}
+%\define [2] {\IC} {{#1} _{#2}} % center
+\define [2] {\SC} {\overset {#2} {#1}}
+%\define [2] {\ISC} {{#1} ^{#2}}
+\define [2] {\ICRm} {\underset {#2} {\Rm {#1}}}
+%\define [2] {\SCRm} {{#1} ^{#2}}
+%\define [2] {\ISCRm} {{#1} ^{#2}}
+%\define [2] {\IL} {{#1} _{#2}}
+%\define [2] {\SL} {{#1} ^{#2}} % left
+%\define [2] {\IL} {{#1} ^{#2}}
+%\define [2] {\ISL} {{#1} ^{#2}}
+
+% % % % % % % % % % % % % % % %
+
+% diacritic (D)
+\define [1] {\DA} {\acute {#1}}
+\define [1] {\DB} {\breve {#1}}
+\define [1] {\DC} {\check {#1}}
+\define [1] {\DD} {\dot {#1}}
+\define [1] {\DDD} {\ddot {#1}}
+\define [1] {\DG} {\grave {#1}}
+\define [1] {\DH} {\hat {#1}}
+\define [1] {\DL} {\bar {#1}} % line
+\define [1] {\DLL} {\bar {\bar {#1}}}
+\define [1] {\DT} {\tilde {#1}}
+
+% under (U)
+% \define {\UD} 
+% \define {\UDD} 
+\define [1] {\UL} {\underline {#1}}
+\define [1] {\ULL} {\underline {\underline {#1}}}
+
+
+% % % % % % % % % % % % % % % %
+
+\define [1] {\M} {\mathematics {#1}}
+
+\define [1] {\ME} {
+   \blank [-0.4cm]
+   \startformula
+   \startalign [n=1,align=middle] #1 \stopalign
+   \stopformula
+   \blank [-0.4cm]}
+
+\define [1] {\MEN} {
+   \blank [-0.4cm]
+   \placeformula
+   \startformula
+   \startalign [n=1,align=middle] #1 \stopalign
+   \stopformula
+   \blank [-0.4cm]}
+
+\define [2] {\MENL} {
+   \blank [-0.4cm]
+   \placeformula [#1]
+   \startformula
+   \startalign [n=1,align=middle] #2 \stopalign
+   \stopformula
+   \blank [-0.4cm]}
+
+\define [1] {\MG} {
+   \startformula
+   \startalign [n=1,align=middle] #1 \stopalign
+   \stopformula}
+
+\define [1] {\MGN} {
+   \placeformula
+   \startformula
+   \startalign [n=1,align=middle] #1 \stopalign
+   \stopformula}
+
+\define [2] {\MGNL} {
+   \placeformula [#1]
+   \startformula
+   \startalign [n=1,align=middle] #2 \stopalign
+   \stopformula}
+
+\define [1] {\MA} {
+   \startsplitformula
+   \startalign #1 \stopalign
+   \stopsplitformula}
+
+\define [1] {\MAN} {
+   \placeformula
+   \startsplitformula
+   \startalign #1 \stopalign
+   \stopsplitformula}
+
+\define [2] {\MANL} {
+   \placeformula [#1]
+   \startsplitformula
+   \startalign #2 \stopalign
+   \stopsplitformula}
+
+% % % % % % % % % % % % % % % %
+
+\define [1] {\Lst} {
+   \incrementcounter [NumberItem]
+   \color [BlueDark] {\Ss {\getnumber [NumberItem] \SpXS #1}.} \SpXS}
+
+

@@ -1,0 +1,29 @@
+\Lst {Definition}
+A statistic \M {T \BR {\XXTV}} is a sufficient statistic for parameter \M {\Gq}, if
+\MEN {
+\NC \I {f} {\XXTV} \BS {\XxTV \RV t \PSm \Gq}
+\e \I {f} {\XXTV} \BS {\XxTV \RV t} \NR
+}
+
+\Lst {Remark}
+We explain the physical meaning of sufficiency.
+Suppose two experimenters obtain i.i.d.\ instances \M {\DT {X}, \DT {Y}}, and compute \M {T \BSS {\DT {X}} \c T \BSS {\DT {X}}}.
+Now,
+\MAN {
+    \NC \Bl {P} \BSS {\DT {X} \e x \PSm \Gq}
+    %
+    \e \NC \Bl {P} \BSS {\DT {X} \e x \RV T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq}
+    \Bl {P} \BSS {T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq} \NR
+    %
+    \NC \e \NC \Bl {P} \BSS {\DT {X} \e x \RV T \BSS {\DT {X}} \e T \BSS {x}}
+    \Bl {P} \BSS {T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq} \NR
+    %
+    \NC \e \NC \Bl {P} \BSS {\DT {Y} \e x \RV T \BSS {\DT {X}} \e T \BSS {x}}
+    \Bl {P} \BSS {T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq} \NR
+    %
+    \NC \e \NC \Bl {P} \BSS {\DT {Y} \e x \RV T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq}
+    \Bl {P} \BSS {T \BSS {\DT {X}} \e T \BSS {x} \PSm \Gq} \NR
+    %
+    \NC \e \NC \Bl {P} \BSS {\DT {Y} \e x \PSm \Gq} \NR
+}
+Thus, two experimenters get exactly the same information about \M {\Gq}, even if they are given different random instances.

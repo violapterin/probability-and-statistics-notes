@@ -1,0 +1,81 @@
+% TBD:
+% make \\ULL shorter
+% spacing between \It
+
+
+\definecounter [NumberItem] [start=0, way=bytext, prefix=no]
+\definefontfeature [default] [default] [onum=yes]
+\definefontfamily [MainFace] [rm] [TeX Gyre Schola]
+\definefontfamily [MainFace] [ss] [TeX Gyre Heros]
+\definefontfamily [MainFace] [tt] [TeX Gyre Cursor] [features=none]
+\definefontfamily [MainFace] [mm] [TeX Gyre Schola Math]
+\definefallbackfamily [MainFace] [mm] [TeX Gyre Dejavu Math] [force=yes,range=uppercasescript]
+\definefallbackfamily [MainFace] [mm] [TeX Gyre Dejavu Math] [force=yes,range=lowercasescript]
+
+\definealternativestyle [StyleTitle] [\ss\bfd] []
+\definealternativestyle [StyleAuthor] [\ss\tfb] []
+
+\definemeasure [pointoneline] [1.5\baselineskip]
+\definecolor [BlueDark] [r=0.2, g=0.25, b=0.5]
+\definecolor [GreenDark] [r=0.2, g=0.5, b=0.25]
+\definealternativestyle [TitleStyle] [\ss\bfd] []
+\definealternativestyle [AuthorStyle] [\ss\tfb] []
+\definemakeup [titlepage] [align=middle]
+\definereferenceformat [eqnref] [left=(, right=), text=Eqn.] 
+\definetextbackground [framedcode] [frame=off, background=no, rightoffset=0.3cm, location=paragraph]
+\definetyping [Code] [
+   numbering=no, bodyfont=small, before={\startframedcode}, after={\stopframedcode}]
+\definemathmatrix[MatrixSquare][left={\left[}, right={\right]}]
+\definemathmatrix[MatrixVertical][left={\left|}, right={\right|}]
+
+% % % % % % % % % % % % % % % %
+
+\setupbodyfont [MainFace, 12pt]
+\setupparagraphs [n=3, before={\blank}, after={\blank}]
+\setupinteraction [state=start]
+\setupcolors [state=start]
+\setuppapersize [A4] [A4]
+\setuppagenumbering [location={footer,middle}, style=slanted]
+\setuphead [chapter, section, subsection] [color=headingcolor]
+\setuphead [chapter] [style={\rm\bfd}]
+\setuphead [section] [style={\rm\tfc}]
+\setuphead [subsection] [style={\rm\itb}]
+\setuphead[title] [incrementnumber=list, number=no]
+\setuphead[subject] [incrementnumber=list, number=no]
+\setuphead[subsubject] [incrementnumber=list, number=no]
+\setuplist[chapter] [width=2cm]
+\setuplist[section] [width=2cm]
+\setuplist[subject] [width=2cm]
+\setupitemize [inbetween={}, style=bold]
+\setuptype [lines=hyphenated]
+\setupindenting[big,always]
+\setupwhitespace[medium]
+\setupcombinedlist [content] [list={chapter, title, section, subject, subsection, subsubject}]
+\setuplayout [
+   leftmargin=12mm,
+   rightmargin=12mm,
+   top=16mm,
+   header=6mm,
+   footer=6mm,
+   bottom=12mm]
+\setupformulae [spacebefore=2mm, spaceafter=2mm, indentnext=no]
+
+
+% % % % % % % % % % % % % % % %
+
+% Important references:
+%
+%   "The TeX Gyre (TG) Collection of Fonts"
+%   www.gust.org.pl/projects/e-foundry/tex-gyre/index_html
+%
+%   Scott Pakin, "The Comprehensive LaTeX Symbol List"
+%   tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
+%
+%   Manuel Pégourié-Gonnard, "A Guide to LuaLaTeX"
+%   dante.ctan.org/tex-archive/info/luatex/lualatex-doc/lualatex-doc.pdf
+%
+%   Will Robertson, "Experimental Unicode Mathematical Typesetting: The unicode-math Package"
+%   tug.ctan.org/tex-archive/macros/latex/contrib/unicode-math/unicode-math-code.pdf
+%
+%   TTF fonts are supported via fontspec?
+%   www.overleaf.com/learn/latex/Questions/What_OTF/TTF_fonts_are_supported_via_fontspec%3F

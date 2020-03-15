@@ -1,0 +1,15 @@
+*.png
+*.jpg
+*.pdf
+*.aux
+*.log
+*.out
+*.snm
+*.nav
+*.toc
+*.tuc
+*.o
+*.txt
+
+bin/
+

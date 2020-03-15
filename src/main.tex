@@ -1,0 +1,39 @@
+\starttext
+
+\usemodule [settings]
+\usemodule [functions]
+\usemodule [symbols]
+\usemodule [special]
+
+
+\startfrontmatter
+
+\startmakeup [titlepage]
+\StyleTitle {\TextTitle}
+\blank [big]
+\StyleAuthor {\TextAuthor}
+\stopmakeup
+
+\completecontent [criterium=all, alternative=c]
+
+\stopfrontmatter
+
+\startbodymatter
+
+
+\startsection [title={Probability Distributions}]
+\input{3-probability-distributions.tex}
+\stopsection
+
+\startsection [title={Random Samples}]
+\input{4-random-samples.tex}
+\stopsection
+
+\startsection [title={Data Reduction}]
+\input{5-data-reduction.tex}
+\stopsection
+
+\stopbodymatter
+
+\stoptext
+
